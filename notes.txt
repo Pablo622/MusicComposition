@@ -1,0 +1,55 @@
+   #good stem function
+
+   def add_stem(self, start_point, end_point):
+        # Draw a line to represent the stem
+
+
+        stem = QGraphicsLineItem(start_point.x(), start_point.y(), start_point.x(), end_point.y())
+        self.scene.addItem(stem)
+        self.added_elements_list.append(stem)
+        for item in self.added_elements_list:
+            if abs(item.x() - start_point.x()) < 10:
+                print("item in range")
+                print(f"old point {start_point}")
+                new_x = item.x() + 1
+                print(f"new{new_x}")
+                adjusted_stem = QGraphicsLineItem(new_x, start_point.y(), new_x, end_point.y())
+                self.scene.addItem(adjusted_stem)
+                self.added_elements_list.append(adjusted_stem)
+                self.scene.removeItem(stem)
+
+
+
+    #good stem function with x align on left side of note
+     def add_stem(self, start_point, end_point):
+        # Draw a line to represent the stem
+
+
+        stem = QGraphicsLineItem(start_point.x(), start_point.y(), start_point.x(), end_point.y())
+        self.scene.addItem(stem)
+        self.added_elements_list.append(stem)
+        for item in self.added_elements_list:
+            if abs(item.x() - start_point.x()) < 10 and abs(item.y() - start_point.y()):
+                print("item in range")
+                print(f"old point {start_point}")
+                new_x = item.x() + 1.4
+                new_y = item.y() + 3
+                print(f"new new x{new_x}")
+                print(f"new y{new_y}")
+                adjusted_stem = QGraphicsLineItem(new_x, new_y, new_x, end_point.y())
+                self.scene.addItem(adjusted_stem)
+                self.added_elements_list.append(adjusted_stem)
+                self.scene.removeItem(stem)
+
+
+##### old set alignment point
+
+
+####old draw beam with individually selected item
+          clicked_item = self.scene.itemAt(position, self.view.transform())
+        if isinstance(clicked_item, QGraphicsLineItem):
+            x_coordinate_of_stem = clicked_item.line().x1()
+            print(f"Clicked stem's x-coordinate: {x_coordinate_of_stem}")
+            self.beam_end_point = QPointF(x_coordinate_of_stem, position.y())
+            print(f"beam end point: {self.beam_end_point}")
+

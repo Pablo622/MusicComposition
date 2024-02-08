@@ -1,0 +1,94 @@
+write music on eben just one instance of staff paper.
+
+add beams and stems to elements list
+
+add bar line
+
+add dot.
+
+make beam lines vertical
+
+make reset flag function
+
+put all beam lines in a list
+ add double stems
+
+ add treble cleff.
+
+ constants
+
+ write ledger lines
+
+ ######################## to do tue jan 2
+add vertical align to black notes
+add vertical align to white notes
+add va to
+text box
+
+##########
+
+set a x distance lock function so that  takes the distance between the last two elements  that were added and sets that
+as the distance for subsequent elements abs(x[-1] - x[-2]) = distance_between_elements .
+next element = elememnts[-1].xxpos + distance_between_elements, ypos.mouseclick)
+#################
+spply distance lock to black and white notes
+
+
+t##### make current vertical align apply to notes and ledger
+
+
+
+########### Current tasks
+
+
+set multiple notes at intervals:
+    b = black notes
+        if black note toggled and number pressed then clicks set a note on click + a note at the  upper interval specified by
+        the number. if down arrow then at interval below (0=10, f1 = 11 ect)
+
+        if shift + any number of numbers then notes are placed at all tne above or below intervals
+
+
+
+# fix setting stem on notes. ###### Give greater tolerance and put stem on closest half of element
+
+# fix adjusted stems when placing beam on bottom so that adjusted enpoints go to bottom beam
+
+
+##############
+
+for later(modify current features)
+
+# change something (either set beam start and enpoints or stafflinbes) so that setting beam points does not pick up staff lines
+
+
+
+for later(new features)
+make beam aligmewnt function so beams can de adjusted to be parallel with existing beams if they are close enough.
+
+modify add stem function so that it adds a stem on all selected note
+
+
+
+
+higlight last element
+
+# show feedback if vertical align is on.
+# show feedback if hoizontal spacing on
+
+#select element and move it pixel by pixel.
+
+# select elememts by highlighter box or lasso
+
+# dynamically draw elements(stem, beam)
+
+# horizontal align. ex: draw elements with an x_start that is a (desired amount. eg:5) to the right of last placed element (or selected)
+
+#  save
+
+# export to pdf
+
+# pages
+
+#show feedback for other functions
+
